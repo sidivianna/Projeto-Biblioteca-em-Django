@@ -21,7 +21,7 @@ class Meta:
      verbose_name = 'Livro'
 
 def __str__(self): 
-    return self.name
+    return self.nome
 
 
     
