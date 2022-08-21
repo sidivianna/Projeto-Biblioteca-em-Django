@@ -2,7 +2,7 @@
 Projeto de um site para gestão de uma biblioteca.
 
 
-## Aula 1:
+## Aula 2:
 
 ### Modelar o banco de dados:
 
