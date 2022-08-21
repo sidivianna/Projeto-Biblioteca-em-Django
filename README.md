@@ -2,7 +2,7 @@
 
 Projeto de um site para gestão de uma biblioteca.
 
-## Aula 3:
+## Aula 2:
 
 ### Login e cadastro para usuários.
 
