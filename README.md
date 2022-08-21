@@ -22,3 +22,4 @@ Criada a função de validação na View.
 Mensagens de erro criadas pelo boostrap alerts.
 Criado sistema para não permitir acesso ao usuário não cadastrado pela barra de navegação.
 Criado o logout do sistema.
+
