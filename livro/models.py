@@ -20,7 +20,7 @@ class Livros(models.Model):
 class Meta:
      verbose_name = 'Livro'
 
-def __str__(self): 
+def __str__(self) -> str: 
     return self.nome
 
 

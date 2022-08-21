@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views # o ponto referencia a propria pasta em que o arquivo está. (livro)
+from . import views
 
 urlpatterns = [
-    path('cadastrar/', views.cadastrar),
+    path('home/', views.home, name = 'home'),
 ]

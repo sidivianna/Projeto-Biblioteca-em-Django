@@ -1,26 +1,25 @@
 # Projeto-Biblioteca-em-Django
 
-### Projeto de um site para gestão de uma biblioteca.
+Projeto de um site para gestão de uma biblioteca.
 
-### Aula 1:
+## Aula 2:
 
-Modelar o banco de dados:
-- Criar a url base nas urls.py do projeto;
-- Criar uma url.py no app livro
-- Criar a função na pasta views.py;
-- Criação do banco de dados na pasta models;
+### Login e cadastro para usuários.
 
-- Nos settings adicionar o aplicativo livro;
-Na pasta models:
-Criar as variáveis de classe - (colunas no banco de dados(nome, autor, etc)
+Criação de uma app: usuário.
 
-Comando: 
-python .\manage.py makemigrations
-python .\manage.py migrate
+Urls – views – Cria a pasta templates e o arquivo cadastro.html
 
-criar conta para a area administrativa:
-user: admin
-senha: 01234	
+Na pasta raiz do projeto cria a pasta templates e cria e arquivo base.html.
+Copia o starter Template no botstrap. 
+https://getbootstrap.com/docs/4.6/getting-started/introduction/
 
-Registrando a model Livro na area administrativa.
-Criando as entradas de registros das informações do livros na área administrativa. (nome, autor, data, etc.) 
+Criada a formatação do html de cadastro e as entradas de nome, email e cpf.
+Criada a url para a validação do cadastro.
+Criada a função de validação na View.
+- validação de campo de nome e email vazios.
+- validação pra senhas maiores que oito dígitos.
+Mensagens de erro criadas pelo boostrap alerts.
+Criado sistema para não permitir acesso ao usuário não cadastrado pela barra de navegação.
+Criado o logout do sistema.
+
