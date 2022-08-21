@@ -1,6 +1,17 @@
 
 from django.db import models
 from datetime import date
+import datetime
+from django.db.models.base import Model
+from usuarios.models import Usuario
+
+class Categoria(models.Model):
+    nome = models.CharField(max_length=30)
+    descricao = models.TextField()
+
+    def __str__(self) -> str:
+        return self.nome
+
 
 
 class Livros(models.Model):
@@ -13,15 +24,19 @@ class Livros(models.Model):
     data_emprestimo = models.DateTimeField(blank = True, null = True)
     data_devolução = models.DateTimeField(blank = True, null = True)
     tempo_duração = models.DateTimeField(blank = True, null = True)
+    categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)
+    usuario = models.ForeignKey(Usuario, on_delete=models.DO_NOTHING)
+    
+    
 
     # blanck = True para toranar o item não obrigatório no cadastro. (vazio)
     # null = True permite o valor null. (Nulo)
     
-class Meta:
-     verbose_name = 'Livro'
+    class Meta:
+        verbose_name = 'Livro'
 
-def __str__(self) -> str: 
-    return self.nome
+    def __str__(self) -> str: 
+        return self.nome
 
 
     
