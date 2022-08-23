@@ -1,9 +1,9 @@
 # Projeto-Biblioteca-em-Django
-## Projeto de um site para gestão de uma biblioteca.
+Projeto de um site para gestão de uma biblioteca.
 
-### Aula 4:
+## Aula 4:
 
-Segurança e lista de empréstimos.
+### Segurança e lista de empréstimos
 
 Criadas as funcionalidades:
 
