@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 
 {% block 'conteudo' %}
+
 <div class="container">
+    <br>
+    <p><a href="{% url 'sair' %}" class="btn btn-danger" >Sair</a><p\>
     <div class="row">
 
         {% for livro in livros %}
             <div class="col-md">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-
                       <h5 class="card-title">{{livro.nome}}</h5>
                       
                       {% if not livro.emprestado %}

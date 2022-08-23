@@ -8,10 +8,14 @@ from hashlib import sha256 #para nao deixar visivel a senha do usuario na area a
 
 
 def login(request):
+    if (request.session.get('usuario')):
+        return redirect('/livro/home/')
     status = request.GET.get('status')
     return render(request, 'login.html', {'status' : status})
 
 def cadastro(request):
+    if (request.session.get('usuario')):
+        return redirect('/livro/home/')
     status = request.GET.get('status')
     return render(request, 'cadastro.html', {'status': status})
 
