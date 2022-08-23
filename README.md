@@ -2,6 +2,7 @@
 Projeto de um site para gestão de uma biblioteca.
 
 ## Aula 3:
+
 ### Criando categoria, linkando usuário e listando livros
 
 - Linkar os livros com categoria através de chave estrangeira para usar o usuário fazer a busca por categorias.
