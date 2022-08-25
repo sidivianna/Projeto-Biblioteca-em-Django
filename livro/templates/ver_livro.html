@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-
+{% load filtros %}
 
 {% block 'conteudo' %} 
 <div class="container">
     <br>
+    
     <form action="#" method="POST"></form>
       {% csrf_token %}
       <p>
@@ -60,13 +61,12 @@
           <tr>
             {% if i.nome_emprestado_anonimo == None %}
             <th scope="row">{{i.nome_emprestado}}</th>
-            
+            {% else %}
             <th scope="row">{{i.nome_emprestado_anonimo}}</th>
-            
+            {% endif %}
             <td>{{i.data_emprestimo}}</td>
             <td>{{i.data_devolucao}}</td>
-            <td></td>
-            {% endif %}
+            <td>{{i.data_devolucao|mostra_duracao:i.data_emprestimo}} Dias</td>
           </tr>
         {% endfor %}
       </tbody>
