@@ -1,18 +1,20 @@
 # Projeto-Biblioteca-em-Django
-Projeto de um site para gestão de uma biblioteca.
 
-## Aula 3:
+## Projeto de um site para gestão de uma biblioteca.
 
-### Criando categoria, linkando usuário e listando livros
+### Aula 5:
 
-- Linkar os livros com categoria através de chave estrangeira para usar o usuário fazer a busca por categorias.
+Criada a função para calcular o tempo de duração dos empréstimos de livros utilizando filtros do Django.
 
-Adicionar cards do bootstrap:
-- https://getbootstrap.com/docs/4.0/components/card/
+Criada nova pasta dentro de livros; templatetags; e dois arquivos: __init__.py e filtros.py.
 
-Adicionar icon bootstrap:
-- https://icons.getbootstrap.com
+Na pasta filtros:
+- criada a função filtro.
 
-Criar a pasta de direcionamento pata a pagina de informações de cada livro.
-- Urls > Views > Templates.
+Registrado o filtro nos settings da biblioteca. (TEMPLATES>libraries)
+
+Criada a funcionalidade para o botão sair.
+
+Criada a funcionalidade de cadastro do livro, utilizando o modal do bootstrap(janela na mesma página)
+- https://getbootstrap.com/docs/4.0/components/modal/
 
