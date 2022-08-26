@@ -17,14 +17,14 @@ class Livros(models.Model):
     autor = models.CharField(max_length = 30)
     co_autor = models.CharField(max_length = 30, blank = True, null = True) 
     data_cadastro = models.DateField(default = date.today)
-    emprestado = models.BooleanField(default=False, null = True)
+    emprestado = models.BooleanField(default=False)
     
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)
     usuario = models.ForeignKey(Usuario, on_delete=models.DO_NOTHING)
     
     
 
-    # blanck = True para toranar o item não obrigatório no cadastro. (vazio)
+    # blanck = True para tornar o item não obrigatório no cadastro. (vazio)
     # null = True permite o valor null. (Nulo)
     
     class Meta:
