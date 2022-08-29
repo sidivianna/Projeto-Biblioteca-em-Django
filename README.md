@@ -2,19 +2,9 @@
 
 ## Projeto de um site para gestão de uma biblioteca.
 
-### Aula 5:
+### Aula 6:
 
-Criada a função para calcular o tempo de duração dos empréstimos de livros utilizando filtros do Django.
+Cadastro de livros, Django modelForm
 
-Criada nova pasta dentro de livros; templatetags; e dois arquivos: __init__.py e filtros.py.
-
-Na pasta filtros:
-- criada a função filtro.
-
-Registrado o filtro nos settings da biblioteca. (TEMPLATES>libraries)
-
-Criada a funcionalidade para o botão sair.
-
-Criada a funcionalidade de cadastro do livro, utilizando o modal do bootstrap(janela na mesma página)
-- https://getbootstrap.com/docs/4.0/components/modal/
-
+- Criada a funcionalidade de preenchimento automático da categoria do formulário.
+- Criada a função de redirecionamento para a pagina home ao adicionar livro novo.
