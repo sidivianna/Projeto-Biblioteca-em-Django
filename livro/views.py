@@ -12,6 +12,8 @@ def home(request):
         usuario = Usuario.objects.get(id = request.session['usuario'])
         livros = Livros.objects.filter(usuario = usuario)
         form = CadastroLivro()
+        form.fields['usuario'].initial = request.session['usuario']
+        form.fields['categoria'].queryset = Categoria.objects.filter(usuario = usuario)
 
         return render(request, 'home.html', {'livros': livros, 'usuario_logado': request.session.get('usuario'), 'form': form})
     
@@ -26,6 +28,8 @@ def ver_livros(request, id):
             categoria_livro = Categoria.objects.filter(usuario = request.session.get('usuario'))
             emprestimos = Emprestimos.objects.filter(livro = livros)
             form = CadastroLivro()
+            form.fields['usuario'].initial = request.session['usuario']
+            
 
             return render(request, 'ver_livro.html', {'livro': livros,     
                                                       'categoria_livro': categoria_livro, 'emprestimos': emprestimos,
@@ -42,7 +46,7 @@ def cadastrar_livro(request):
         
         if form.is_valid():
             form.save()
-            return HttpResponse('Livro cadastrado com sucesso')
+            return redirect('/livro/home')
         else:
             return HttpResponse('Dados inválidos')
             
