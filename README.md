@@ -13,3 +13,5 @@ Criado um menu de interação na barra de navegação utilizando dropdown do  bo
 - adicionado um contador de livros cadastrados.
 - adicionado o botão de devolver o livro.
 
+Utilizados dropDowns do bootstrap:
+https://getbootstrap.com/docs/4.0/components/dropdowns/
