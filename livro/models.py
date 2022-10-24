@@ -13,7 +13,6 @@ class Categoria(models.Model):
     def __str__(self) -> str:
         return self.nome
 
-
 class Livros(models.Model):
     nome = models.CharField(max_length = 100)
     autor = models.CharField(max_length = 30)
@@ -35,7 +34,6 @@ class Livros(models.Model):
     def __str__(self) -> str:
         return self.nome
 
-    
 class Emprestimos(models.Model):
     choices = (
         ('P', 'Péssimo '),
@@ -53,5 +51,3 @@ class Emprestimos(models.Model):
     def __str__(self) -> str:
         return f" {self.nome_emprestado} | {self.livro}"
 
-
-    

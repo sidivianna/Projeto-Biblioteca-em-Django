@@ -148,3 +148,18 @@ def seus_emprestimos(request):
 
     return render(request, 'seus_emprestimos.html', {'usuario_logado': request.session['usuario'],
                                                     'emprestimos': emprestimos})
+
+def processa_avaliacao(request):
+    id_emprestimo = request.POST.get('id_emprestimo')
+    opcoes = request.POST.get('opcoes')
+    id_livro = request.POST.get('id_livro')
+
+    # verificar segurança
+    # nao permitir avaliação de livro que ainda nao foi devolvido
+    # colocar as estrelas
+
+    emprestimo = Emprestimos.objects.get(id = id_emprestimo)
+    emprestimo.avaliacao = opcoes
+    emprestimo.save()
+
+    return redirect(f'/livro/ver_livro/{id_livro}')
